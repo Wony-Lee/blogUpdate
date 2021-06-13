@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import {
+    Section,
+    Container,
+    SectionHead,
+    SectionBody,
+    HeadLeft,
+    HeadRight,
+} from "./style/styled";
 
 const BlogLayout = styled.div`
     display: flex;
@@ -39,9 +47,68 @@ const ContentItem = styled.div`
 `;
 
 const BodyContent = () => {
+    const [openStudy, setOpenStudy] = useState(false);
+    const [openGuests, setOpenGuests] = useState(false);
+    const [openContact, setOpenContact] = useState(false);
+    const [openBoard, setOpenBoard] = useState(false);
+    const openStudyToggle = useCallback((e) => {
+        setOpenStudy((prev) => !prev);
+    }, []);
+    const openGuestsToggle = useCallback((e) => {
+        setOpenGuests((prev) => !prev);
+    }, []);
+    const openContactToggle = useCallback((e) => {
+        setOpenContact((prev) => !prev);
+    }, []);
+    const openBoardToggle = useCallback((e) => {
+        setOpenBoard((prev) => !prev);
+    });
+
     return (
         <>
-            <BlogLayout>
+            <Container>
+                <Section>
+                    <SectionHead>
+                        <HeadLeft>Study</HeadLeft>
+                        <HeadRight onClick={openStudyToggle}>
+                            전체보기
+                        </HeadRight>
+                    </SectionHead>
+                    {openStudy && <SectionBody>Study 게시글</SectionBody>}
+                </Section>
+                <Section>
+                    <SectionHead>
+                        <HeadLeft>Guests</HeadLeft>
+                        <HeadRight onClick={openGuestsToggle}>
+                            전체보기
+                        </HeadRight>
+                    </SectionHead>
+                    {openGuests && <SectionBody>Guests 게시글</SectionBody>}
+                </Section>
+                <Section>
+                    <SectionHead>
+                        <HeadLeft>Contact</HeadLeft>
+                        <HeadRight onClick={openContactToggle}>
+                            전체보기
+                        </HeadRight>
+                    </SectionHead>
+                    {openContact && <SectionBody>Contact 게시글</SectionBody>}
+                </Section>
+                <Section>
+                    <SectionHead>
+                        <HeadLeft>Board</HeadLeft>
+                        <HeadRight onClick={openBoardToggle}>
+                            전체보기
+                        </HeadRight>
+                    </SectionHead>
+                    {openBoard && (
+                        <SectionBody>
+                            <div>Board 게시글</div>
+                        </SectionBody>
+                    )}
+                </Section>
+            </Container>
+            {/* <BlogLayout>
                 <ContentLeft>
                     <ContentItem>
                         <Link href="/info">
@@ -66,7 +133,7 @@ const BodyContent = () => {
                         </Link>
                     </ContentItem>
                 </ContentRight>
-            </BlogLayout>
+            </BlogLayout> */}
         </>
     );
 };

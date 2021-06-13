@@ -3,9 +3,9 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { useDispatch, useSelector } from "react-redux";
-import { injectGlobal } from "@emotion/css";
 import { logoutRequestAction } from "../reducer/user";
 import Footer from "./Footer";
+import Nav from "./Navigation/Nav";
 
 const NavForm = styled.div`
     margin-top: 30px;
@@ -13,6 +13,7 @@ const NavForm = styled.div`
     height: 40px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid #ddd;
     @media (max-width: 480px) {
         margin-top: 0;
         margin-bottom: 0;
@@ -95,7 +96,8 @@ const AppLayout = ({ children }) => {
     });
     return (
         <>
-            <NavForm>
+            <Nav />
+            {/* <NavForm>
                 <NavLeft>
                     <Link href="/">
                         <NavAtag>
@@ -125,7 +127,7 @@ const AppLayout = ({ children }) => {
                         </NavAtag>
                     </Link>
                 </NavRight>
-            </NavForm>
+            </NavForm> */}
             <ContentLayout>
                 <VoidDiv></VoidDiv>
                 <PageContents>{children}</PageContents>
