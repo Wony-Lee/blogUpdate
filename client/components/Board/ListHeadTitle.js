@@ -21,6 +21,7 @@ const Atag = styled.a`
 `;
 
 const SearchContainer = styled.div`
+    margin-top: 5%;
     display: flex;
 `;
 
@@ -38,9 +39,14 @@ const ListHeadTitle = () => {
 
     const [searchData, onChangeSearchData] = useInput("");
 
-    const onSearch = useCallback(() => {
-        Router.push(`/hashtag/${searchData}`);
-    }, [searchData]);
+    const onSearch = useCallback(
+        (e) => {
+            if (e.key === "Enter") {
+                Router.push(`/hashtag/${searchData}`);
+            }
+        },
+        [searchData]
+    );
 
     return (
         <>

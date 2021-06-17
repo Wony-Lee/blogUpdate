@@ -12,6 +12,7 @@ import { END } from "redux-saga";
 import { LOAD_USER_INFO_REQUEST } from "../reducer/user";
 
 const SignContainer = styled.div`
+    margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
     display: flex;
@@ -192,7 +193,7 @@ const SignUp = () => {
                             >
                                 가입하기
                             </button>
-                            <Link href="/blog">
+                            <Link href="/">
                                 <a>
                                     <button type="reset">돌아가기</button>
                                 </a>

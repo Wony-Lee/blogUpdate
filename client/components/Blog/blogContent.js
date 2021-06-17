@@ -8,7 +8,7 @@ import {
     SectionBody,
     HeadLeft,
     HeadRight,
-} from "./style/styled";
+} from "../style/styled";
 
 const BlogLayout = styled.div`
     display: flex;
@@ -51,18 +51,18 @@ const BodyContent = () => {
     const [openGuests, setOpenGuests] = useState(false);
     const [openContact, setOpenContact] = useState(false);
     const [openBoard, setOpenBoard] = useState(false);
-    const openStudyToggle = useCallback((e) => {
+    const openStudyToggle = useCallback(() => {
         setOpenStudy((prev) => !prev);
     }, []);
-    const openGuestsToggle = useCallback((e) => {
+    const openGuestsToggle = useCallback(() => {
         setOpenGuests((prev) => !prev);
     }, []);
-    const openContactToggle = useCallback((e) => {
+    const openContactToggle = useCallback(() => {
         setOpenContact((prev) => !prev);
     }, []);
-    const openBoardToggle = useCallback((e) => {
+    const openBoardToggle = useCallback(() => {
         setOpenBoard((prev) => !prev);
-    });
+    }, []);
 
     return (
         <>

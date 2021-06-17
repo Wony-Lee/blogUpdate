@@ -1,9 +1,8 @@
-import React, { useCallback } from "react";
+import React from "react";
 import Link from "next/link";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import { useDispatch, useSelector } from "react-redux";
-import { logoutRequestAction } from "../reducer/user";
+
 import Footer from "./Footer";
 import Nav from "./Navigation/Nav";
 
@@ -88,12 +87,6 @@ const GuestText = styled.div`
 `;
 
 const AppLayout = ({ children }) => {
-    const dispatch = useDispatch();
-    const { user } = useSelector((state) => state.user);
-    const onLogout = useCallback((e) => {
-        e.preventDefault();
-        dispatch(logoutRequestAction());
-    });
     return (
         <>
             <Nav />

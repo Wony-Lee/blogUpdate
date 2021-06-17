@@ -8,7 +8,7 @@ const NavLogo = () => {
         <>
             <NavContainer>
                 <NavMenuLogo>
-                    <Link href="/blog">
+                    <Link href="/">
                         <a>NavLogo DevStudy</a>
                     </Link>
                 </NavMenuLogo>

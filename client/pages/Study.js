@@ -1,16 +1,18 @@
 import React from "react";
+
 import AppLayout from "../components/AppLayout";
+import StudyMain from "../components/Study/Index";
+
 import axios from "axios";
 import wrapper from "../store/configureStore";
 import { END } from "redux-saga";
 import { LOAD_USER_INFO_REQUEST } from "../reducer/user";
-import NoPage from "../components/NoPage";
 
-const blog = () => {
+const Study = () => {
     return (
         <>
             <AppLayout>
-                <NoPage />
+                <StudyMain />
             </AppLayout>
         </>
     );
@@ -32,4 +34,4 @@ export const getServerSideProps = wrapper.getServerSideProps(
     }
 );
 
-export default blog;
+export default Study;

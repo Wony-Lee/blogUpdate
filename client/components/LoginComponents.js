@@ -10,7 +10,7 @@ const LoginLayout = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    background: white;
+
     height: 500px;
     @media (max-width: 480px) {
         height: 300px;

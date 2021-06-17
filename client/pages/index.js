@@ -4,12 +4,15 @@ import wrapper from "../store/configureStore";
 import { END } from "redux-saga";
 import { LOAD_USER_INFO_REQUEST } from "../reducer/user";
 
-import FirstPage from "../components/FirstPage";
+import BlogPage from "../components/blogPage";
+import AppLayout from "../components/AppLayout";
 
 const Home = () => {
     return (
         <>
-            <FirstPage />
+            <AppLayout>
+                <BlogPage />
+            </AppLayout>
         </>
     );
 };

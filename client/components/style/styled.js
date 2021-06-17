@@ -31,7 +31,14 @@ button{
   .slick-track {
     display:flex;
   }
-
+  a {
+    text-decoration: none;
+    color: white;
+    }
+  a:hover {
+    color:pink
+    }
+  
 `;
 
 /* Global Style */
@@ -42,6 +49,27 @@ export const Container = styled.div`
 export const Section = styled.div`
     margin: 2% 0;
 `;
+
+export const FlexSection = styled.div`
+    margin: 2% 0;
+    display: flex;
+    flex-wrap: wrap;
+`;
+
+export const SectionItem = styled.div`
+    margin: 2.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    width: 19%;
+    height: 200px;
+    @media (max-width: 480px) {
+        width: 45%;
+        height: 150px;
+    }
+`;
+
 export const SectionHead = styled.div`
     border: 1px solid white;
     height: 50px;
@@ -80,13 +108,7 @@ export const NavContainer = styled.div`
 export const NavMenuLogo = styled.div`
     margin-left: 2%;
     width: 28%;
-    & a {
-        text-decoration: none;
-        color: white;
-    }
-    & a:hover {
-        color: pink;
-    }
+
     @media (max-width: 380px) {
         font-size: 10pt;
     }
@@ -100,13 +122,7 @@ export const NavMenuContainer = styled.div`
         text-align: center;
         width: 20%;
     }
-    & a {
-        text-decoration: none;
-        color: white;
-    }
-    & a:hover {
-        color: pink;
-    }
+
     @media (max-width: 380px) {
         font-size: 10pt;
     }
@@ -115,3 +131,12 @@ export const NavMenuContainer = styled.div`
 /* Body Style */
 
 /* Footer Style */
+
+/* 준비중인 페이지 */
+
+export const NoPageSection = styled.div`
+    display: flex;
+    justify-content: center;
+    align-item: center;
+    margin-top: 15%;
+`;
