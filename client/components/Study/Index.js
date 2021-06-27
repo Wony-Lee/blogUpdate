@@ -1,31 +1,15 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 
-import {
-    Container,
-    Section,
-    SectionHead,
-    SectionBody,
-    HeadRight,
-    HeadLeft,
-} from "../style/styled";
+import { Container } from "../style/styled";
+import StudyCard from "./studyCard";
+import StudyPost from "./studyPost";
 
 const StudyMain = () => {
-    const [openToggle, setOpenToggle] = useState(false);
-    const openToggleHandler = useCallback(() => {
-        setOpenToggle((prev) => !prev);
-    }, []);
     return (
         <>
             <Container>
-                <Section>
-                    <SectionHead>
-                        <HeadLeft>Title</HeadLeft>
-                        <HeadRight onClick={openToggleHandler}>
-                            전체보기
-                        </HeadRight>
-                    </SectionHead>
-                    {openToggle && <SectionBody>구현중</SectionBody>}
-                </Section>
+                <StudyPost />
+                <StudyCard />
             </Container>
         </>
     );

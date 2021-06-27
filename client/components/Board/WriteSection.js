@@ -87,11 +87,6 @@ const RemoveBtn = styled.span`
 const FileInput = styled.input`
     display: none;
 `;
-const FileLable = styled.label`
-    color: black;
-    background: white;
-    padding: 10px;
-`;
 
 const WriteSection = () => {
     const dispatch = useDispatch();
@@ -108,7 +103,7 @@ const WriteSection = () => {
         if (addBoardDone) {
             setBoardTitle("");
             setBoardContent("");
-            Router.replace("/blog");
+            Router.replace("/");
         }
     }, [addBoardDone]);
 
@@ -129,6 +124,7 @@ const WriteSection = () => {
             });
             formData.append("boardTitle", boardTitle);
             formData.append("boardContent", boardContent);
+
             dispatch({
                 type: ADD_BOARD_REQUEST,
                 data: formData,
@@ -168,8 +164,8 @@ const WriteSection = () => {
                             value={boardTitle}
                             onChange={onChangeBoardTitle}
                             placeholder="제목"
-            			required           
-	    />
+                            required
+                        />
                     </SectionOne>
                     <SectionTwo>
                         <label htmlFor="boardContent"></label>
@@ -178,8 +174,8 @@ const WriteSection = () => {
                             value={boardContent}
                             onChange={onChangeBoardContent}
                             placeholder="내용을 입력해주세요."
-            			required          
-	    />
+                            required
+                        />
                     </SectionTwo>
                     <PreViewSection>
                         <PreviewBox>

@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 
 const ReadContainer = styled.div`
     border: 1px solid white;
-    height: 90%;
+    height: 100%;
 `;
 const ReadSectionOne = styled.div`
     border: 1px solid red;

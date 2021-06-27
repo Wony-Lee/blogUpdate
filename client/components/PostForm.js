@@ -91,7 +91,10 @@ const PostForm = () => {
             setName("");
         }
     }, [addPostDone]);
-
+    const onReset = () => {
+        setName("");
+        setText("");
+    };
     const onSubmit = useCallback(
         (e) => {
             e.preventDefault();
@@ -119,8 +122,8 @@ const PostForm = () => {
                                 placeholder="Name"
                                 maxLength="4"
                                 id="guestName"
-            			required               
-	    />
+                                required
+                            />
                         </PostTitle>
                         <PostCenter>
                             <label htmlFor="guestText"></label>
@@ -129,12 +132,14 @@ const PostForm = () => {
                                 onChange={onChangeGuestText}
                                 placeholder="내용을 입력해주세요."
                                 id="guestText"
-            			required               
-	    />
+                                required
+                            />
                         </PostCenter>
                         <PostFooter>
                             <SuccessBtn type="submit">확인</SuccessBtn>
-                            <ReturnBtn type="reset">취소</ReturnBtn>
+                            <ReturnBtn type="button" onClick={onReset}>
+                                취소
+                            </ReturnBtn>
                         </PostFooter>
                     </PostArea>
                 </PostContent>

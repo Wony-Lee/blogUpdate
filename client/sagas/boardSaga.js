@@ -131,11 +131,11 @@ function* watchLoadBoard() {
 }
 
 function* watchLoadBoards() {
-    yield throttle(5000, LOAD_BOARDS_REQUEST, loadBoards);
+    yield throttle(500, LOAD_BOARDS_REQUEST, loadBoards);
 }
 
 function* watchLoadHashtagBoards() {
-    yield throttle(5000, LOAD_HASHTAG_BOARDS_REQUEST, loadHashtagBoards);
+    yield throttle(500, LOAD_HASHTAG_BOARDS_REQUEST, loadHashtagBoards);
 }
 
 export default function* boardSaga() {

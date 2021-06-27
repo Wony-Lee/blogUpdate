@@ -6,53 +6,12 @@ import styled from "@emotion/styled";
 import Footer from "./Footer";
 import Nav from "./Navigation/Nav";
 
-const NavForm = styled.div`
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #ddd;
-    @media (max-width: 480px) {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-`;
-
-const NavLeft = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    width: 50%;
-`;
-
-const NavRight = styled.div`
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 50%;
-    @media (max-width: 480px) {
-        font-size: 8pt;
-    }
-`;
-
-const NavText = styled.span`
-    font-size: 15pt;
-    color: white;
-    margin-left: 30px;
-    margin-right: 30px;
-`;
-
-const NavAtag = styled.a`
-    color: wthie;
-    cursor: pointer;
-`;
-
 const ContentLayout = styled.div`
     display: flex;
     justify-content: center;
     position: relative;
     bottom: 0;
-    min-height: 830px;
+    min-height: 1920px;
     margin-bottom: 80px;
     @media (max-width: 480px) {
         min-height: 480px;

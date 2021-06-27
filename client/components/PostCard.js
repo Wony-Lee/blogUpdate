@@ -144,7 +144,7 @@ const PostCard = ({ post }) => {
                                     {post.Comments.map((item, comment) => (
                                         <NameList key={comment}>
                                             <NameSpan>
-                                                {item.commentName}{" "}
+                                                {item.commentName}
                                             </NameSpan>
                                             <NameSpan>{item.content}</NameSpan>
                                         </NameList>

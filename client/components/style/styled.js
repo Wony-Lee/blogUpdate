@@ -12,7 +12,12 @@ body{
     background: linear-gradient(180deg, #6B85EA 0%, #DDCAF5 100%);
     user-select:none;
 }
-
+select {
+    outline: none;
+}
+textarea {
+    outline: none;
+}
 button{
     outline:none;
     cursor:pointer;
@@ -20,25 +25,26 @@ button{
     background:white;
     height: 30px;
     width: 80px;
+    margin:5px;
   }
-  input {
+input {
     outline:none;
-  }
-  
-  .slick-slider {
+}
+
+.slick-slider {
     display:block;
-  }
-  .slick-track {
+}
+.slick-track {
     display:flex;
-  }
-  a {
+}
+a {
     text-decoration: none;
     color: white;
-    }
-  a:hover {
+}
+a:hover {
     color:pink
-    }
-  
+}
+
 `;
 
 /* Global Style */
@@ -65,7 +71,7 @@ export const SectionItem = styled.div`
     width: 19%;
     height: 200px;
     @media (max-width: 480px) {
-        width: 45%;
+        width: 44%;
         height: 150px;
     }
 `;
@@ -129,6 +135,10 @@ export const NavMenuContainer = styled.div`
 `;
 
 /* Body Style */
+export const StudyNav = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`;
 
 /* Footer Style */
 
